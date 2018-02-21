@@ -32,10 +32,14 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ***ROUTER 0***
 
-Router>en                                                  
+Router>en
+
 Router#conf t 
+
 Router(config)#int f1/0 
+
 Router(config-if)#no shutdown
+
 Router(config-if)#exit
 
 Router(config)#int f0/0
