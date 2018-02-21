@@ -100,7 +100,7 @@ Router#write memory
 4.Запуск протокола RIP, вывод информации
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ROUTER 1
-
+===================================================================
 Router>en
 Router#conf t
 Router(config)#router rip
@@ -142,7 +142,7 @@ C       192.168.10.0 is directly connected, FastEthernet0/0
 
 
 ROUTER 1
-
+===================================================================
 Router>en
 Router#conf t
 Router>en
@@ -194,7 +194,7 @@ C       192.168.10.0 is directly connected, FastEthernet0/0
 C       192.168.10.4 is directly connected, FastEthernet0
 
 ROUTE 2
-
+===================================================================
 Router>en
 Router#conf t
 Router(config)#router rip
