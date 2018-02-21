@@ -43,42 +43,68 @@ Router(config-if)#no shutdown
 Router(config-if)#exit
 
 Router(config)#int f0/0
+
 Router(config-if)#ip address 192.168.10.1 255.255.255.252 
+
 Router(config-if)#exit 
+
 Router(config)#int f0/1 
+
 Router(config-if)#ip address 10.23.1.1 255.255.255.0
+
 Router(config-if)#exit
+
 Router(config)#int f1/0 
+
 Router(config-if)#ip address 192.168.1.1 255.255.255.0 
+
 Router(config-if)#exit Router(config)
 
 Router(config)#exit
+
 Router#write memory
 
 ***ROUTER 1***
 
 Router>en                                                  
+
 Router#conf t 
+
 Router(config)#int f1/0 
+
 Router(config-if)#no shutdown
+
 Router(config-if)#exit
 
+
 Router(config)#int f0/0
+
+
 Router(config-if)#ip address 192.168.10.21 255.255.255.252 
+
 Router(config-if)#exit 
+
 Router(config)#int f0/1 
+
 Router(config-if)#ip address 192.168.10.6 255.255.255.252
+
+
+
 Router(config-if)#exit
+
 Router(config)#int f1/0 
+
 Router(config-if)#ip address 192.168.2.1 255.255.255.0 
+
 Router(config-if)#exit Router(config)
 
 Router(config)#exit
+
 Router#write memory
 
 ***ROUTER 2***
 
-Router>en                                                  
+Router>en                                                 
 Router#conf t 
 Router(config)#int f1/0 
 Router(config-if)#no shutdown
