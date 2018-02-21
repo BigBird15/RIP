@@ -105,22 +105,35 @@ Router#write memory
 ***ROUTER 2***
 
 Router>en                                                 
+
 Router#conf t 
+
 Router(config)#int f1/0 
+
 Router(config-if)#no shutdown
+
 Router(config-if)#exit
 
 Router(config)#int f0/0
+
 Router(config-if)#ip address 10.23.1.2 255.255.255.0 
+
 Router(config-if)#exit 
+
 Router(config)#int f0/1 
+
 Router(config-if)#ip address 192.168.10.5 255.255.255.252
+
 Router(config-if)#exit
+
 Router(config)#int f1/0 
+
 Router(config-if)#ip address 192.168.3.1 255.255.255.0 
+
 Router(config-if)#exit Router(config)
 
 Router(config)#exit
+
 Router#write memory
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -129,15 +142,23 @@ Router#write memory
 ***ROUTER 1***
 
 Router>en
+
 Router#conf t
+
 Router(config)#router rip
+
 Router(config-router)#version 2
+
 Router(config-router)# network 192.168.10.0
+
 Router(config-router)# network 10.23.1.0
+
 Router(config-router)# network 192.168.1.0
 ************************************************************************************************************
 Router>en
+
 Router#show ip interface brief 
+
 Interface              IP-Address      OK? Method Status                Protocol 
 FastEthernet0/0        192.168.10.1    YES manual up                    up 
 FastEthernet0/1        10.23.1.1       YES manual up                    up 
@@ -145,6 +166,7 @@ FastEthernet1/0        192.168.1.1     YES manual up                    up
 Vlan1                  unassigned      YES unset 
 ************************************************************************************************************
 Router#show ip rip database
+
 10.23.1.0/24    auto-summary
 10.23.1.0/24    directly connected, FastEthernet0/1
 192.168.1.0/24    auto-summary
@@ -170,17 +192,27 @@ C       192.168.10.0 is directly connected, FastEthernet0/0
 
 ***ROUTER 1***
 Router>en
+
 Router#conf t
+
 Router>en
+
 Router#conf t
+
 Router(config)#router rip
+
 Router(config-router)#version 2
+
 Router(config-router)# network 192.168.10.0
+
 Router(config-router)# network 192.168.10.4
+
 Router(config-router)# network 192.168.2.0
 ****************************************************************************************************
 Router>en
+
 Router#show ip interface brief 
+
 Interface              IP-Address      OK? Method Status                Protocol 
 FastEthernet0/0        192.168.10.2    YES manual up                    up 
 FastEthernet0/1        192.168.10.6    YES manual up                    up 
@@ -188,6 +220,7 @@ FastEthernet1/0        192.168.2.1     YES manual up                    up
 Vlan1                  unassigned      YES unset 
 ****************************************************************************************************
 Router#show ip rip database
+
 10.0.0.0/8    auto-summary
 10.0.0.0/8
     [1] via 192.168.10.5, 00:00:11, FastEthernet0/1
